@@ -1,0 +1,73 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:textStyle="bold"
+        android:text="With HorizontalScrollview"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:measureAllChildren="false">
+
+        <LinearLayout
+            android:id="@+id/layoutImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/mButtonAdd"
+                android:layout_width="130dp"
+                android:layout_height="130dp"
+                android:layout_margin="12dp"
+                android:adjustViewBounds="true"
+                android:text="Select Image"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="12dp"
+        android:textStyle="bold"
+        android:text="With RecycleView"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mRecyclerViewFeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="130dp"
+            android:layout_marginTop="@dimen/space_medium"
+            android:orientation="horizontal"
+            tools:itemCount="2"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+
+        <Button
+            android:id="@+id/mFeedbackImage"
+            android:layout_width="130dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="@dimen/space_medium"
+            android:adjustViewBounds="true"
+            android:text="Select Image"/>
+
+    </LinearLayout>
+</LinearLayout>
